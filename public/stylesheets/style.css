@@ -1,5 +1,5 @@
 body {
-  background-color: #e1d3ca;
+  background-color: #f2f2f4;
   font-family: 'Playfair Display', serif; }
 
 body, html {
@@ -9,14 +9,15 @@ body, html {
   margin: 0; }
 
 div.menu-item {
-  background-color: #b4ddbf;
+  background-color: #ffffff;
   border: 1px solid #bbb;
   border-radius: 10px;
   padding: 10px;
   position: relative; }
   div.menu-item img {
-    width: 100%;
+    width: 80%;
     height: 10em;
+    width: 10em;
     background-size: cover; }
   div.menu-item div.price {
     background-color: rgba(255, 255, 255, 0.5);
@@ -55,8 +56,10 @@ nav.navbar {
   top: 0;
   width: 100%;
   z-index: 2;
-  background-color: #454140;
+  background-color: #ffffff;
   border-radius: 0px; }
+  nav.navbar nav.navbar.bigtext {
+    color: #000000; }
 
 div.sidebar {
   /*position:fixed;*/
@@ -66,7 +69,7 @@ div.sidebar {
   div.sidebar div.cart-title {
     width: 100%;
     font-size: 2.5em;
-    background-color: #454140;
+    background-color: #ffffff;
     color: white; }
   div.sidebar div.order-menu {
     height: 25em;
