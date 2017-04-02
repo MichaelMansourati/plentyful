@@ -2,7 +2,7 @@ const arrItemsObj = [];
 
 function addItemToCart(name,quantity,id) {
 	let $itemsUl = $('ul.cart-items');
-	let $item = $(`<li data-id="${id}" data-quantity=${quantity}>${name}<span class="pull-right">x ${quantity}</span></li>`);
+	let $item = $(`<li class="cart-items" data-id="${id}" data-quantity=${quantity}>${name}<span class="xx pull-right">x ${quantity}</span></li>`);
 	console.log(name);
 	$itemsUl.append($item);
 	arrItemsObj.push({dish_id: id, quantity: quantity});
