@@ -20,8 +20,17 @@ router.post('/',(req,res) => {
 	// console.log(req.body.items);
 	// arrDishes = [{ dish_id: 13, quantity: 3 },{ dish_id: 15, quantity: 2 },{ dish_id: 17, quantity: 2}];
 	DataHelpers.insertOrder(JSON.parse(req.body.items),null,'807-213-2133',function(order_id){
-		console.log('Order id:',order_id);
 	});
+});
+
+router.get('/',(req,res) => {
+	if (!req.session.admin) {
+		res.redirect('/');
+	} else {
+		DataHelpers.getOrders(function(err,arrOrders) {
+			res.render('orders',{ arrOrders: arrOrders});
+		});
+	}
 });
 
 router.get('/sms',(req,res) => {

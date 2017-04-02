@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAQ;EACP,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,GAAG",
+"sources": ["../../app/stylesheets/orders.scss"],
+"names": [],
+"file": "orders.css"
+}
