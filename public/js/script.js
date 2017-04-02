@@ -34,6 +34,7 @@ $(document).ready(function() {
 		let $qtyEl = $(this).siblings('span.itemqty')[0];
 		let currQty = +$qtyEl.innerHTML;
 		let productId = $(this).closest('div.menu-item').data().id;
+		console.log(productId);
 		if (currQty > 0) {
 			currQty--;
 			updateCartItem(productId,currQty);
@@ -61,8 +62,10 @@ $(document).ready(function() {
 		currQty++;
 		$qtyEl.innerHTML = currQty;
 		// Add item to cart
-		let productName = $(this).parent().siblings('span.menu-item-title')[0].innerHTML;
+		let productName = $(this).parent().siblings()[0].innerHTML;
+		console.log(productName);
 		let productId = $(this).closest('div.menu-item').data().id;
+		console.log(productId);
 		if (currQty === 1) {
 			addItemToCart(productName,currQty,productId);
 		}
