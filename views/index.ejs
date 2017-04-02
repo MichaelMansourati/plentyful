@@ -23,7 +23,7 @@
 						<div class="row">
 							<section class="dish-type" id="entrees">
 								<h2>Entrées</h2>
-								<div class="menu-item col-md-3 col-md-offset-1" data-id="1">
+								<div class="menu-item col-md-3 col-md-offset-1" data-id="1" data-price="25.99">
 									<header><img class="img-responsive" src="http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2017/03/Garlicky-Cashew-Broccoli-Tofu-Stir-Fry-3991-6491-320x320.jpg" alt="Sesame fried Tofu"></header>
 									<p class="price">$25.99</p>
 									<main>
@@ -35,7 +35,7 @@
 										</div>
 									</main>
 								</div>
-								<div class="menu-item col-md-3 col-md-offset-1" data-id="2">
+								<div class="menu-item col-md-3 col-md-offset-1" data-id="2" data-price="19.99">
 									<header><img class="img-responsive" src="#"></header>
 									<p class="price">$19.99</p>
 									<main>
@@ -47,7 +47,7 @@
 										</div>
 									</main>
 								</div>
-								<div class="menu-item col-md-3 col-md-offset-1" data-id="3">
+								<div class="menu-item col-md-3 col-md-offset-1" data-id="3" data-price="17.99">
 									<p class="price">$17.99</p>
 									<main>
 										<span class="menu-item-title">Squash spaghetti chow mein</span>
@@ -259,8 +259,10 @@
 						<p class="text-center"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Your order</p>
 					</div>
 					<div class="order-menu">
+						<ul class="cart-items">	
+						</ul>
 						<div class="order-actions">
-							<p>CAD<span class="total-price">1</span></p>
+							<p>Total price: CAD <span class="total-price">0</span></p>
 							<form action="">
 								<input type="submit" value="Place order" class="pull-right">
 							</form>
@@ -272,5 +274,6 @@
     	<footer>Developed by ... </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

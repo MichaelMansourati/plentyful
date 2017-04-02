@@ -25,6 +25,8 @@ div.menu-item {
     right: 0;
     top: 0;
     font-size: 1em; }
+  div.menu-item i.fa {
+    cursor: pointer; }
 
 header#big-picture {
   height: 400px;
