@@ -57,9 +57,3 @@ typings/
 # dotenv environment variables file
 .env
 
-# i don't what file this is
-.sass-cache
-
-.sass-cache/a43ee5ffe497cd9ac3b1edf72f13b3f338259785/style.scssc
-
-
