@@ -1,0 +1,39 @@
+<html>
+<head>
+	<%- include partials/_head %>
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/stylesheets/orders.css">
+</head>
+<body>
+	<nav class="navbar navbar-light">
+    	  	<h1 class="bigtext">Plentyful <i class="fa fa-leaf" aria-hidden="true"></i><h1>
+    </nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div id="accordion">
+					<% arrOrders.forEach((order) => { %>
+							<h3>
+								<%= `Order ${order.id} by ${order.cust_name}, Status: ${order.status} `%>
+								<div class="pull-right"><%= `Total CAD$ ${order.total_price}` %></div>
+							</h3>
+							<div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt vehicula nulla vitae imperdiet. Integer elementum, purus at accumsan egestas, sem felis commodo ante, nec gravida nibh urna ac odio. Nunc hendrerit nunc sit amet felis rutrum lobortis. Vestibulum gravida tellus ante, sed laoreet diam congue non. Proin metus ante<div class="pull-right"><a href="<%= `/orders/${order.id}/edit` %>" class="btn btn-info">Update</a></div></p>
+							</div>
+						</li>
+					<%	}) %>
+					
+				</div>		
+			</div>
+		</div>
+		
+		
+	</div>
+	<%- include partials/_foot %>
+<script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+</body>
+</html>
