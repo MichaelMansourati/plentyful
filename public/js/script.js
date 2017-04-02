@@ -1,19 +1,31 @@
-var cartItems = [];
+const arrItemsObj = [];
 
 function addItemToCart(name,quantity,id) {
 	let $itemsUl = $('ul.cart-items');
 	let $item = $(`<li data-id="${id}" data-quantity=${quantity}>${name}<span class="pull-right">x ${quantity}</span></li>`);
 	$itemsUl.append($item);
+	arrItemsObj.push({dish_id: id, quantity: quantity});
 }
 
 function removeItemFromCart(productId) {
 	$children = $('ul.cart-items').children(`li[data-id=${productId}]`).remove();
+	arrItemsObj.forEach((item,index) => {
+		if (item.dish_id == productId) {
+			arrItemsObj.splice(index,1);
+			return;
+		}
+	})
 }
 
 function updateCartItem(productId,quantity) {
 	$element = $('ul.cart-items').children(`li[data-id=${productId}]`).first().children('.pull-right').first()
 	$element.parent()[0].dataset.quantity = quantity;
 	$element.text(`x ${quantity}`);
+	arrItemsObj.forEach((item) => {
+		if (item.dish_id == productId) {
+			item.quantity = quantity;
+		}
+	})
 }
 
 function updateTotalPrice() {
@@ -62,7 +74,9 @@ $(document).ready(function() {
 		updateTotalPrice();
 	})
 
-	$('button#xunda').on('click',function(ev) {
-		$.post('/orders',{ 'teste': [1,2,3,4,2,1,3,3,2,13,'cachorro','vaca']});
+	$('button#xunda').click(function(ev) {
+		// var arrObjs = JSON.stringify([{dish_id: 12, quantity: 20},{ dish_id: 13, quantity: 10}]);
+		$.post('/orders',{ 'items': arrItemsObj});
 	})
+
 });

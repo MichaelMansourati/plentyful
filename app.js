@@ -6,7 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const cookieSession = require('cookie-session');
 const methodOverride = require('method-override');
-const dotenv = require('dotenv').config()
+const dotenv = require('dotenv').config();
+const dbsettings = require('./lib/DbSettings');
+const knex = require('knex')(dbsettings);
 
 var index = require('./routes/index');
 var users = require('./routes/users');
