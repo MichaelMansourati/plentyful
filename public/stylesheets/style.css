@@ -89,5 +89,7 @@ div.sidebar {
       background-color: #ffffff; }
       div.sidebar div.order-menu div.order-actions button.place-order-btn {
         margin-bottom: 10px; }
+      div.sidebar div.order-menu div.order-actions .user-info-section {
+        display: none; }
 
 /*# sourceMappingURL=style.css.map */
