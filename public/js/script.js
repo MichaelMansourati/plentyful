@@ -61,4 +61,8 @@ $(document).ready(function() {
 		updateCartItem(productId,currQty);
 		updateTotalPrice();
 	})
+
+	$('button#xunda').on('click',function(ev) {
+		$.post('/orders',{ 'teste': [1,2,3,4,2,1,3,3,2,13,'cachorro','vaca']});
+	})
 });
