@@ -1,6 +1,6 @@
 body {
-  background-color: #e1d3ca;
-  font-family: 'Playfair Display', serif; }
+  background-color: #f2f2f4;
+  font-family: 'Carrois Gothic', serif; }
 
 body, html {
   height: 100%;
@@ -8,24 +8,23 @@ body, html {
   padding: 0;
   margin: 0; }
 
+div.spacer {
+  color: #f2f2f4; }
+
 div.menu-item {
-  background-color: #b4ddbf;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  padding: 10px;
+  background-color: #ffffff;
   position: relative;
-  /* Plus and minus buttons */ }
-  div.menu-item img {
-    width: 100%;
-    height: 10em;
-    background-size: cover; }
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 10px;
+  font-size: 15px; }
   div.menu-item div.price {
+    float: right;
     background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
-    border-bottom: 3px solid rgba(255, 0, 0, 0.5);
-    right: 10px;
-    top: 10px;
-    font-size: 1.5em; }
+    right: 0;
+    top: 0;
+    font-size: 1em; }
   div.menu-item i.fa {
     cursor: pointer; }
 
@@ -35,18 +34,7 @@ header#big-picture {
   background-size: cover;
   background-position: fixed;
   width: 100%;
-  position: relative;
-  top: 50px; }
-  header#big-picture div.welcome-msg {
-    position: absolute;
-    bottom: 0;
-    height: 8em;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%; }
-    header#big-picture div.welcome-msg p {
-      margin-top: 0.75em;
-      font-size: 2em; }
+  position: relative; }
 
 /*section#entrees {
 	position: relative;
@@ -58,8 +46,12 @@ nav.navbar {
   top: 0;
   width: 100%;
   z-index: 2;
-  background-color: #454140;
+  background-color: #ffffff;
   border-radius: 0px; }
+  nav.navbar .bigtext {
+    color: #000000; }
+    nav.navbar .bigtext .fa-leaf {
+      color: yellowgreen !important; }
 
 div.sidebar {
   /*position:fixed;*/
@@ -69,8 +61,8 @@ div.sidebar {
   div.sidebar div.cart-title {
     width: 100%;
     font-size: 2.5em;
-    background-color: #454140;
-    color: white; }
+    background-color: #ffffff;
+    color: #000000; }
   div.sidebar div.order-menu {
     height: 25em;
     background-color: white;
