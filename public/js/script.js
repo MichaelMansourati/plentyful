@@ -27,13 +27,14 @@ function updateTotalPrice() {
 }
 
 $(document).ready(function() {
+	$('div.menu-item.classWithShadow').removeClass('classWithShadow');
 
 	// Decrease item quantity on cart
 	$('div.menu-item').on('click','.fa-minus-circle',function(event) {
 		let $qtyEl = $(this).siblings('span.itemqty')[0];
 		let currQty = +$qtyEl.innerHTML;
 		let productId = $(this).closest('div.menu-item').data().id;
-		if (currQty > 0) { 
+		if (currQty > 0) {
 			currQty--;
 			updateCartItem(productId,currQty);
 		}
@@ -45,6 +46,13 @@ $(document).ready(function() {
 		updateTotalPrice();
 
 	})
+
+	//shadow on hover
+	$('div.menu-item').hover(function() {
+		console.log('hovered');
+		$(this).toggleClass('classWithShadow');
+	});
+
 
 	// Increate item quantity on cart
 	$('div.menu-item').on('click','.fa-plus-circle',function(event) {

@@ -21,6 +21,9 @@ div.menu-item {
 	padding-right: 0;
 	margin-bottom: 10px;
 	font-size: 15px;
+  &.classWithShadow {
+    box-shadow: 3px 3px 10px 2px #888888;
+ 	}
 	div.price {
 		float: right;
 		background-color: rgba(255,255,255,0.5);
@@ -37,7 +40,7 @@ div.menu-item {
 
 header#big-picture {
 	height:400px;
-	background-image: url('https://kwanzaaculinarians.files.wordpress.com/2014/11/marinated-tempeh-spicy-apricot-sauce-1-the-duo-dishes.jpg');
+	background-image: url('https://i.ytimg.com/vi/7zX0GJ1DO4A/maxresdefault.jpg');
 	background-size: cover;
 	background-position: fixed;
 	width:100%;
