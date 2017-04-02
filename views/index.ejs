@@ -23,7 +23,7 @@
 					<div class="row">
 						<section id="entrees">
 							<header>Entrées</header>
-							<div class="menu-item col-md-4" data-id="1">
+							<div class="menu-item col-md-4" data-id="1" data-price="25.99">
 								<header><img src="http://www.seriouseats.com/images/2015/04/20140205-fried-tofu-vegan-20.jpg" alt="Sesame fried Tofu"></header>
 								<div class="price">$25.99</div>
 								<main>
@@ -36,7 +36,7 @@
 									
 								</main>
 							</div>
-							<div class="menu-item col-md-4" data-id="2">
+							<div class="menu-item col-md-4" data-id="2" data-price="19.99">
 								<header><img src="https://kwanzaaculinarians.files.wordpress.com/2014/11/marinated-tempeh-spicy-apricot-sauce-1-the-duo-dishes.jpg" alt="Marinated Tempeh"></header>
 								<div class="price">$19.99</div>
 								<main>
@@ -48,7 +48,7 @@
 									</div>
 								</main>
 							</div>
-							<div class="menu-item col-md-4" data-id="3">
+							<div class="menu-item col-md-4" data-id="3" data-price="17.99">
 								<header><img src="https://s-media-cache-ak0.pinimg.com/474x/3f/0e/e6/3f0ee6bc80e03b7e9370cfafa542d5e8.jpg" alt=""></header>
 								<div class="price">$17.99</div>
 								<main>
@@ -88,7 +88,7 @@
 					</section>
 					<section id="beverages">
 						<header>Beverages</header>
-													<div class="menu-item col-md-3">
+							<div class="menu-item col-md-3">
 								<header><img src="#" alt=""></header>
 								<div class="price">$9.99</div>
 								<main><span class="menu-item-title">Entree title</span></main>
@@ -117,8 +117,10 @@
 						<p class="text-center"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Your order</p>
 					</div>
 					<div class="order-menu">
+						<ul class="cart-items">	
+						</ul>
 						<div class="order-actions">
-							<p>CAD<span class="total-price">1</span></p>
+							<p>Total price: CAD <span class="total-price">0</span></p>
 							<form action="">
 								<input type="submit" value="Place order" class="pull-right">
 							</form>		
@@ -130,5 +132,6 @@
     	<footer>Developed by ... </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

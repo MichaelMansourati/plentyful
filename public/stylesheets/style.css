@@ -13,7 +13,8 @@ div.menu-item {
   border: 1px solid #bbb;
   border-radius: 10px;
   padding: 10px;
-  position: relative; }
+  position: relative;
+  /* Plus and minus buttons */ }
   div.menu-item img {
     width: 100%;
     height: 10em;
@@ -25,6 +26,8 @@ div.menu-item {
     right: 10px;
     top: 10px;
     font-size: 1.5em; }
+  div.menu-item i.fa {
+    cursor: pointer; }
 
 header#big-picture {
   height: 400px;
