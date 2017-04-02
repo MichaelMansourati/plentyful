@@ -76,6 +76,9 @@ div.sidebar {
       position: absolute;
       bottom: 0;
       width: 100%;
-      background-color: red; }
+      background-color: #f2f2f4;
+      border-width: 2px;
+      border-style: solid;
+      border-color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */

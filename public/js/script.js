@@ -3,6 +3,7 @@ const arrItemsObj = [];
 function addItemToCart(name,quantity,id) {
 	let $itemsUl = $('ul.cart-items');
 	let $item = $(`<li data-id="${id}" data-quantity=${quantity}>${name}<span class="pull-right">x ${quantity}</span></li>`);
+	console.log(name);
 	$itemsUl.append($item);
 	arrItemsObj.push({dish_id: id, quantity: quantity});
 }
@@ -39,7 +40,6 @@ function updateTotalPrice() {
 }
 
 $(document).ready(function() {
-	$('div.menu-item.classWithShadow').removeClass('classWithShadow');
 
 	// Decrease item quantity on cart
 	$('div.menu-item').on('click','.fa-minus-circle',function(event) {
@@ -74,7 +74,7 @@ $(document).ready(function() {
 		currQty++;
 		$qtyEl.innerHTML = currQty;
 		// Add item to cart
-		let productName = $(this).parent().siblings()[0].innerHTML;
+		let productName = $(this).parent().parent().siblings()[1].innerHTML;
 		console.log(productName);
 		let productId = $(this).closest('div.menu-item').data().id;
 		console.log(productId);
@@ -89,5 +89,10 @@ $(document).ready(function() {
 		// var arrObjs = JSON.stringify([{dish_id: 12, quantity: 20},{ dish_id: 13, quantity: 10}]);
 		$.post('/orders',{ 'items': arrItemsObj});
 	})
+
+	$('button.place-order-btn').click(function(event) {
+		event.preventDefault();
+		$('div.user-info-section').slideToggle('slow');
+	});
 
 });
