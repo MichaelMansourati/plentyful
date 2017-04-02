@@ -1,11 +1,14 @@
 // Update with your config settings.
-
+const env = require('dotenv').config();
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'postgresql',
     connection: {
-      filename: './dev.sqlite3'
+      database: process.env.DB_NAME,
+      user:     process.env.DB_USER,
+      password: process.env.DB_PASS,
+      host: process.env.DB_HOST 
     }
   },
 
