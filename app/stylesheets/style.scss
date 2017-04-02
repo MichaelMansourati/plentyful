@@ -1,6 +1,6 @@
 body {
 	background-color: #f2f2f4;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Carrois Gothic', serif;
 }
 body,html {
 	height:100%;
@@ -9,25 +9,25 @@ body,html {
 	margin: 0;
 }
 
+div.spacer {
+	color: #f2f2f4;
+}
+
+
 div.menu-item {
 	background-color: #ffffff;
-	border: 1px solid #bbb;
-	border-radius: 10px;
-	padding:10px;
 	position:relative;
-	img {
-		width: 80%;
-		height: 10em;
-		width: 10em;
-		background-size: cover;
-	}
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 10px;
+	font-size: 15px;
 	div.price {
+		float: right;
 		background-color: rgba(255,255,255,0.5);
 		position: absolute;
-		border-bottom: 3px solid rgba(255,0,0,0.5);
-		right:10px;
-		top:10px;
-		font-size: 1.5em;
+		right: 0;
+		top: 0;
+		font-size: 1em;
 	}
 }
 
@@ -38,19 +38,6 @@ header#big-picture {
 	background-position: fixed;
 	width:100%;
 	position:relative;
-	top:50px;
-	div.welcome-msg {
-		position: absolute;
-		bottom: 0;
-		height:8em;
-		color:white;
-		background-color: rgba(0,0,0,0.5);
-		width:100%;
-		p {
-			margin-top:0.75em;
-			font-size: 2em;
-		}
-	}
 }
 
 /*section#entrees {
@@ -65,8 +52,11 @@ nav.navbar {
 	z-index: 2;
 	background-color: #ffffff;
 	border-radius: 0px;
-	nav.navbar.bigtext {
+	.bigtext {
 		color: #000000;
+		.fa-leaf {
+			color: yellowgreen !important;
+		}
 	}
 }
 
@@ -79,7 +69,7 @@ div.sidebar {
 		width: 100%;
 		font-size: 2.5em;
 		background-color: #ffffff;
-		color:white;
+		color: #000000;
 	}
 	div.order-menu {
 		height: 25em;
