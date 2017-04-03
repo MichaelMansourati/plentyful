@@ -74,14 +74,15 @@ nav.navbar {
 		.fa-leaf {
 			color: yellowgreen !important;
 		}
+		.admin {
+			margin-right: 35px;
+		}
 	}
 }
 
 div.sidebar {
-	/*position:fixed;*/
+	margin-left: 85px;
 	top:60px;
-	/*right:0px;*/
-	padding: 0px;
 	div.cart-title {
 		width: 100%;
 		font-size: 2.5em;

@@ -63,12 +63,12 @@ nav.navbar {
     color: #000000; }
     nav.navbar .bigtext .fa-leaf {
       color: yellowgreen !important; }
+    nav.navbar .bigtext .admin {
+      margin-right: 35px; }
 
 div.sidebar {
-  /*position:fixed;*/
-  top: 60px;
-  /*right:0px;*/
-  padding: 0px; }
+  margin-left: 85px;
+  top: 60px; }
   div.sidebar div.cart-title {
     width: 100%;
     font-size: 2.5em;
