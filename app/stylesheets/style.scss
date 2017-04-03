@@ -13,29 +13,38 @@ div.spacer {
 	color: #f2f2f4;
 }
 
+section.dish-type h2 {
+	padding-left: 35px;
+}
 
 div.menu-item {
 	background-color: #ffffff;
 	position:relative;
 	padding-left: 0;
 	padding-right: 0;
+	padding-bottom: 5px;
 	margin-bottom: 10px;
 	font-size: 15px;
 	min-height: 260px;
   &.classWithShadow {
     box-shadow: 3px 3px 10px 2px #888888;
  	}
-	div.price {
-		float: right;
+	span.price {
 		background-color: rgba(255,255,255,0.5);
 		position: absolute;
-		right: 0;
-		top: 0;
 		font-size: 1em;
+		margin-left: 5px;
+	}
+	.menu-item-title {
+		margin-top: 5px;
+		margin-left: 5px;
 	}
 	/* Plus and minus buttons */
 	i.fa {
 		cursor: pointer;
+	}
+	i.fa-plus-circle {
+		margin-right: 10px;
 	}
 }
 
@@ -79,19 +88,29 @@ div.sidebar {
 		background-color: #ffffff;
 		color: #000000;
 	}
+	ul.cart-items {
+		list-style-type: none;
+		padding-right: 35px;
+	}
 	div.order-menu {
 		height: 25em;
 		background-color: white;
 		position: relative;
 		overflow-y: scroll;
 		div.order-actions {
+			padding: 10px;
 			position: absolute;
 			bottom:0;
 			width: 100%;
-			background-color: #f2f2f4;
-			border-width: 2px;
-			border-style: solid;
-			border-color: #ffffff;
+			background-color: #ffffff;
+			button.place-order-btn {
+				margin: 5px;
+				margin-left: 10px;
+				margin-bottom: 10px;
+			}
+		}
+		.user-info-section {
+			margin: 10px;
 		}
 	}
 }
