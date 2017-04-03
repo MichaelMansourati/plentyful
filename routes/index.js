@@ -3,9 +3,26 @@ var router = express.Router();
 const dbsettings = require('../lib/DbSettings')
 const knex = require('knex')(dbsettings);
 const DataHelpers = require('../lib/DataHelpers')(knex);
+const twilio = require('twilio');
+const dotnev = require('dotenv').config({path:'../'});
+const client = twilio(process.env.TWILIO_ACCOUNT_SID,process.env.TWILIO_TOKEN);
+
+function sendSMS(cust_number,body,callback) {
+	client.sendMessage({
+		body: body,
+		to: cust_number,
+		from: '+13065000498'
+	},callback);
+}
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+	if (req.query.name && req.query.phone) {
+		let phone = decodeURIComponent(req.query.phone);
+		sendSMS(req.query.phone,'Your order has been placed',function(err,res) {
+			res.redirect('/order')
+		});
+	}
 	DataHelpers.getDishes(function(err,results) {
 		let dishesObj = {};
 		if (err) res.send(err);
@@ -17,7 +34,6 @@ router.get('/', function(req, res, next) {
 				dishesObj[record.category].push(record);
 			}
 		})
-		// console.log(dishesObj);		
 		res.render('index', { title: 'Express', dishes: dishesObj });
 	})
   

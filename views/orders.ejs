@@ -18,7 +18,10 @@
 								<div class="pull-right"><%= `Total CAD$ ${order.total_price}` %></div>
 							</h3>
 							<div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt vehicula nulla vitae imperdiet. Integer elementum, purus at accumsan egestas, sem felis commodo ante, nec gravida nibh urna ac odio. Nunc hendrerit nunc sit amet felis rutrum lobortis. Vestibulum gravida tellus ante, sed laoreet diam congue non. Proin metus ante<div class="pull-right"><a href="<%= `/orders/${order.id}/edit` %>" class="btn btn-info">Update</a></div></p>
+								<p><li>Pesto Pizza</li>
+									<li>Almond Butter Noodles</li>
+									<li>Veggie Stir-Fry</li>
+							<div class="pull-right"><a href="<%= `/orders/${order.id}/edit` %>" class="btn btn-info">Update</a></div></p>
 							</div>
 						</li>
 					<%	}) %>
