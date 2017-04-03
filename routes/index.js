@@ -6,7 +6,21 @@ const DataHelpers = require('../lib/DataHelpers')(knex);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+	DataHelpers.getDishes(function(err,results) {
+		let dishesObj = {};
+		if (err) res.send(err);
+		results.forEach((record) => {
+			if (dishesObj[record.category]) {
+				dishesObj[record.category].push(record);
+			} else {
+				dishesObj[record.category] = [];
+				dishesObj[record.category].push(record);
+			}
+		})
+		// console.log(dishesObj);		
+		res.render('index', { title: 'Express', dishes: dishesObj });
+	})
+  
 });
 
 router.get('/login',(req,res) => {
