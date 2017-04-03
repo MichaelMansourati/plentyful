@@ -18,11 +18,12 @@
 						<div class="row">
 							<section class="dish-type" id="entrees">
 								<h2>Entrées</h2>
-								<div class="menu-item col-md-3 col-md-offset-1" data-id="1" data-price="25.99">
-									<header><img class="img-responsive" src="http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2017/03/Garlicky-Cashew-Broccoli-Tofu-Stir-Fry-3991-6491-320x320.jpg" alt="Sesame fried Tofu"></header>
-									<p class="menu-item-title">Sesame fried Tofu and Broccoli</p>
+								<% dishes.entrees.forEach((dish) => { %>
+								<div class="menu-item col-md-3 col-md-offset-1" data-id="<%= dish.id %>" data-price="<%= dish.price %>">
+									<header><img class="img-responsive" src="<%= dish.image_url %>"></header>
+									<p class="menu-item-title"><%= dish.name %></p>
 									<main>
-										<span class="price">$25.99</span>
+										<span class="price">$<%= dish.price %></span>
 										<div class="pull-right">
 											<i class="fa fa-minus-circle" aria-hidden="true"></i>
 											<span class="itemqty">0</span>
@@ -30,87 +31,19 @@
 										</div>
 									</main>
 								</div>
-								<div class="menu-item col-md-3 col-md-offset-1" data-id="2" data-price="19.99">
-									<header><img class="img-responsive" src="#"></header>
-									<p class="menu-item-title">Spicy Apricot Sauce Tempeh</p>
-									<main>
-										<span class="price">$19.99</span>
-										<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-										</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<header><img class="img-responsive" src="#"></header>
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1" data-id="3" data-price="17.99">
-									<header><img class="img-responsive" src="http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2016/12/LPC-Sage-Garlic-Roasted-Veggies-8204-320x320.jpg"></header>
-									<p class="menu-item-title">Squash spaghetti chow mein</p>
-									<main>
-									<span class="price">$17.99</span>
-									<div class="pull-right">
-										<i class="fa fa-minus-circle" aria-hidden="true"></i>
-										<span class="itemqty">0</span>
-										<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="clearfix menu-item col-md-3 col-md-offset-1">
-									<header><img class="img-responsive" src="http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2017/03/Spicy-Sriracha-Nourish-Bowl-649-3-2619-320x320.jpg" alt=""></header>
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
+								<% }) %>
 							</section>
 						</div>
 
 					<row class="row">
 						<section class="dish-type" id="desserts">
 							<h2>Desserts</h2>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<header><img class="img-responsive" src="http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2017/02/Vegan-Mediterranean-Pesto-Pizza-649-2202-320x320.jpg" alt=""></header>
-									<p class="menu-item-title">Entree title</p>
+							<% dishes.desserts.forEach((dish) => { %>
+								<div class="menu-item col-md-3 col-md-offset-1" data-id="<%= dish.id %>" data-price="<%= dish.price %>">
+									<header><img class="img-responsive" src="<%= dish.image_url %>"></header>
+									<p class="menu-item-title"><%= dish.name %></p>
 									<main>
-									<span class="price">$9.99</span>
+									<span class="price">$ <%= dish.price %></span>
 									<div class="pull-right">
 											<i class="fa fa-minus-circle" aria-hidden="true"></i>
 											<span class="itemqty">0</span>
@@ -118,71 +51,19 @@
 									</div>
 									</main>
 								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
+							<% }) %>
 						</section>
 					</row>
 
 					<row class="row">
 						<section class="dish-type" id="beverages">
 							<h2>Beverages</h2>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
+								<% dishes.desserts.forEach((dish) => { %>
+								<div class="menu-item col-md-3 col-md-offset-1" data-id="<%= dish.id %>" data-price="<%= dish.price %>">
+									<header><img class="img-responsive" src="<%= dish.image_url %>"></header>
+									<p class="menu-item-title"><%= dish.name %></p>
 									<main>
-									<span class="price">$9.99</span>
+									<span class="price">$ <%= dish.price %></span>
 									<div class="pull-right">
 											<i class="fa fa-minus-circle" aria-hidden="true"></i>
 											<span class="itemqty">0</span>
@@ -190,72 +71,7 @@
 									</div>
 									</main>
 								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
-								<div class="menu-item col-md-3 col-md-offset-1">
-									<p class="menu-item-title">Entree title</p>
-									<main>
-									<span class="price">$9.99</span>
-									<div class="pull-right">
-											<i class="fa fa-minus-circle" aria-hidden="true"></i>
-											<span class="itemqty">0</span>
-											<i class="fa fa-plus-circle" aria-hidden="true"></i>
-									</div>
-									</main>
-								</div>
+							<% }) %>
 						</section>
 					</row>
 
@@ -284,8 +100,7 @@
     			</aside>
     		</div>
     	</div>
-    	<button id="xunda">Xunda</button>
-    	<footer>Developed by ... </footer>
+    	<footer>Developed by Bruno Farias and Michael Mansouraty </footer>
     </div>
     <%- include partials/_foot %>
   </body>

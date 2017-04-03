@@ -3,7 +3,6 @@ const arrItemsObj = [];
 function addItemToCart(name,quantity,id) {
 	let $itemsUl = $('ul.cart-items');
 	let $item = $(`<li data-id="${id}" data-quantity=${quantity}>${name}<span class="pull-right">x ${quantity}</span></li>`);
-	console.log(name);
 	$itemsUl.append($item);
 	arrItemsObj.push({dish_id: id, quantity: quantity});
 }
@@ -46,7 +45,6 @@ $(document).ready(function() {
 		let $qtyEl = $(this).siblings('span.itemqty')[0];
 		let currQty = +$qtyEl.innerHTML;
 		let productId = $(this).closest('div.menu-item').data().id;
-		console.log(productId);
 		if (currQty > 0) {
 			currQty--;
 			updateCartItem(productId,currQty);
@@ -62,7 +60,6 @@ $(document).ready(function() {
 
 	//shadow on hover
 	$('div.menu-item').hover(function() {
-		console.log('hovered');
 		$(this).toggleClass('classWithShadow');
 	});
 
@@ -75,9 +72,7 @@ $(document).ready(function() {
 		$qtyEl.innerHTML = currQty;
 		// Add item to cart
 		let productName = $(this).parent().parent().siblings()[1].innerHTML;
-		console.log(productName);
 		let productId = $(this).closest('div.menu-item').data().id;
-		console.log(productId);
 		if (currQty === 1) {
 			addItemToCart(productName,currQty,productId);
 		}
