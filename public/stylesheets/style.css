@@ -22,15 +22,19 @@ div.menu-item {
   /* Plus and minus buttons */ }
   div.menu-item.classWithShadow {
     box-shadow: 3px 3px 10px 2px #888888; }
-  div.menu-item div.price {
+  div.menu-item span.price {
     float: right;
     background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 1em; }
+    font-size: 1em;
+    padding-left: 5px; }
+  div.menu-item p.menu-item-title {
+    padding-top: 2px;
+    padding-left: 5px; }
   div.menu-item i.fa {
     cursor: pointer; }
+  div.menu-item .fa-plus-circle {
+    padding-right: 5px; }
 
 header#big-picture {
   height: 400px;
@@ -40,11 +44,6 @@ header#big-picture {
   width: 100%;
   position: relative; }
 
-/*section#entrees {
-	position: relative;
-	top:4em;
-}
-*/
 nav.navbar {
   position: fixed;
   top: 0;
@@ -53,15 +52,25 @@ nav.navbar {
   background-color: #ffffff;
   border-radius: 0px; }
   nav.navbar .bigtext {
+    padding-left: 10px;
     color: #000000; }
     nav.navbar .bigtext .fa-leaf {
       color: yellowgreen !important; }
+    nav.navbar .bigtext .admin {
+      margin-right: 10px; }
+
+li.cart-items {
+  list-style-type: none;
+  padding-top: 10px; }
+
+span.xx {
+  padding-right: 35px; }
 
 div.sidebar {
   /*position:fixed;*/
   top: 60px;
   /*right:0px;*/
-  padding: 0px; }
+  padding-right: 10px; }
   div.sidebar div.cart-title {
     width: 100%;
     font-size: 2.5em;
@@ -73,12 +82,14 @@ div.sidebar {
     position: relative;
     overflow-y: scroll; }
     div.sidebar div.order-menu div.order-actions {
+      padding: 10px;
       position: absolute;
       bottom: 0;
       width: 100%;
-      background-color: #f2f2f4;
-      border-width: 2px;
-      border-style: solid;
-      border-color: #ffffff; }
+      background-color: #ffffff; }
+      div.sidebar div.order-menu div.order-actions button.place-order-btn {
+        margin-bottom: 10px; }
+      div.sidebar div.order-menu div.order-actions .user-info-section {
+        display: none; }
 
 /*# sourceMappingURL=style.css.map */
