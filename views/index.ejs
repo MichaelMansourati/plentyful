@@ -58,7 +58,7 @@
 					<row class="row">
 						<section class="dish-type" id="beverages">
 							<h2>Beverages</h2>
-								<% dishes.desserts.forEach((dish) => { %>
+								<% dishes.beverages.forEach((dish) => { %>
 								<div class="menu-item col-md-3 col-md-offset-1" data-id="<%= dish.id %>" data-price="<%= dish.price %>">
 									<header><img class="img-responsive" src="<%= dish.image_url %>"></header>
 									<p class="menu-item-title"><%= dish.name %></p>
@@ -80,7 +80,7 @@
     		<div class="col-md-3 col-md-offset-1 col-sm-12 sidebar">
     			<aside>
 					<div class="cart-title">
-						<p class="text-center"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Your order</p>
+						<p class="text-center cart-title"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Your order</p>
 					</div>
 					<div class="order-menu">
 						<ul class="cart-items">
@@ -100,7 +100,7 @@
     			</aside>
     		</div>
     	</div>
-    	<footer>Developed by Bruno Farias and Michael Mansouraty </footer>
+    	<footer>Developed by Bruno Farias and Michael Mansourati </footer>
     </div>
     <%- include partials/_foot %>
   </body>

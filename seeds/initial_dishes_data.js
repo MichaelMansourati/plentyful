@@ -5,16 +5,20 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('dishes').insert([
-        {name: 'Vegan plate 1', description: 'Vegan plate made with pork beef', price: 17.99, category: 'entrees', image_url: 'http://www.spiciefoodie.com/blogimages/2011/RoVeg_HumDelight02.jpg' },
-        {name: 'Vegan plate 2', description: 'Vegan plate made with ham', price: 9.99, category: 'entrees', image_url: 'https://lh5.googleusercontent.com/-o1OUU2ijcFM/Tt5t6uQsMsI/AAAAAAAAgTM/0TITSQXhuLc/s564/southern-plate06.jpg' },
-        {name: 'Spicy Potato Taco plate', description: 'Vegan plate made with potato', price: 13.99, category: 'entrees', image_url: 'http://buildyourbite.com/wp-content/uploads/2014/12/spicy-potato-taco-plate-4.jpg' },
-        {name: 'Savory Miso Broccolli', description: 'With spiced lentil', price: 12.99, category: 'entrees', image_url: 'http://1.bp.blogspot.com/-ms4NCKPKBM4/UfmZ0DlIQzI/AAAAAAAAzZk/_187PX2__DY/s700/R-lentils_8457lentil-plate_edited-1lentil-power-plate.png' },
-        {name: 'Vegan plate 5', description: 'Vegan plate made with sausage', price: 13.99, category: 'entrees', image_url: 'http://www.veganinsanity.com/wp-content/uploads/2014/04/Vegan-Salad-Plate.jpg' },
-        {name: 'Vegan plate 6', description: 'Vegan plate made with sausage', price: 13.99, category: 'entrees', image_url: 'http://www.spiciefoodie.com/blogimages/2011/10/Linguine_SundriedTomato03.jpg' },
-        {name: 'Dessert 1', description: 'Vegan dessert 1', price: 4.99, category: 'desserts', image_url: 'http://media.foodnetwork.ca/imageserve/wp-content/uploads/sites/6/2016/06/vegan-peanut-butter-cups/x.jpg' },
-        {name: 'Dessert 2', description: 'Vegan dessert 2', price: 4.99, category: 'desserts', image_url: 'http://media.foodnetwork.ca/imageserve/wp-content/uploads/sites/6/2015/04/strawberry-cheesecake-bites/x.jpg' },
-        {name: 'Dessert 3', description: 'Vegan dessert 3', price: 6.99, category: 'desserts', image_url: 'http://media.foodnetwork.ca/imageserve/wp-content/uploads/sites/6/2016/06/vegan-coconut-doughnuts/x.jpg' },
-        {name: 'Dessert 4', description: 'Vegan dessert 4', price: 3.99, category: 'desserts', image_url: 'http://www.fnstatic.co.uk/images/content/package/-strong-raw-vegan-snickers-bars-strong-_1.jpg' }
+        {name: 'Veggie Stir-Fry', description: 'on a bed of couscous with sesame seeds', price: 17.99, category: 'entrees', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2017/03/Garlicky-Cashew-Broccoli-Tofu-Stir-Fry-3991-6491-320x320.jpg' },
+        {name: 'Sriracha Bowl', description: 'Healthy bowl for healthy goals', price: 9.99, category: 'entrees', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2017/03/Spicy-Sriracha-Nourish-Bowl-649-3-2619-320x320.jpg' },
+        {name: 'Pesto Pizza', description: 'Mediterranean-influenced vegan Pizza', price: 13.99, category: 'entrees', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2017/02/Vegan-Mediterranean-Pesto-Pizza-649-2202-320x320.jpg' },
+        {name: 'Breakfast Bowl', description: 'With Scrambled Tofu', price: 12.99, category: 'entrees', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2017/01/Tofu-Scramble-Vegan-Breakfast-Bowl-0385-320x320.jpg' },
+        {name: 'Coconut Curry', description: 'Creamy Red Curry with fesh veggies', price: 13.99, category: 'entrees', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2017/01/Creamy-Vegan-Red-Coconut-Curry-Soup-0302-2-320x320.jpg' },
+        {name: 'Almond Butter Noodles', description: 'Noodle Dish Garnished with Lime', price: 13.99, category: 'entrees', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2016/11/vegan-almond-butter-noodles-649-6499-2-320x320.jpg' },
+        {name: 'Fudgy Walnut Brownie', description: 'yummerinooo', price: 10.99, category: 'desserts', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2017/02/Fudgy-Vegan-Brownies-5-320x320.jpg' },
+        {name: 'Pumpkin Pie', description: 'With Walnut Caramel Sauce', price: 4.99, category: 'desserts', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2016/11/Vegan-Pumpkin-Pie-with-Walnut-Caramel-Sauce-649-5963-320x320.jpg' },
+        {name: 'Raspberry Crumble Bar', description: 'Sweet...but also tart...', price: 6.99, category: 'desserts', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2016/04/Vegan-Raspberry-Crumble-Bars-ilovevegan8-320x320.jpg' },
+        {name: 'Lemon Poppy Seed Scones', description: 'Also Sweet...and also also tart!', price: 3.99, category: 'desserts', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2016/02/Vegan-Lemon-Poppy-Seed-Scones-320x320.jpg' },
+        {name: 'Lemonade', description: 'refreshing lemonade', price: 3.99, category: 'beverages', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/Perfect-Summertime-Lemonade-ilovevegan7-320x320.jpg'},
+        {name: 'Carrot Smoothie', description: 'a smoothie with carrots in it', price: 4.99, category: 'beverages', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2016/03/Carrot-Orange-Fruit-Smoothie6-320x320.jpg'},
+        {name: 'Coco-Banana Smoothie', description: 'a super yummy smoothie!!!', price: 5.99, category: 'beverages', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2012/09/Tropical-coconut-mango-smoothie-320x320.jpg'},
+        {name: 'Ginger Citrus Tea', description: 'for healthy people', price: 3.49, category: 'beverages', image_url: 'http://1ajvmf3xekdd2r35dh3pklbl.wpengine.netdna-cdn.com/wp-content/uploads/2012/10/IMG_072222-320x320.jpg'}
       ]);
     });
 };

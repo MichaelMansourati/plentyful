@@ -22,7 +22,6 @@ div.menu-item {
   padding-bottom: 5px;
   margin-bottom: 30px;
   font-size: 15px;
-  min-height: 275px;
   /* Plus and minus buttons */ }
   div.menu-item.classWithShadow {
     box-shadow: 3px 3px 10px 2px #888888; }
@@ -75,9 +74,12 @@ div.sidebar {
     font-size: 2.5em;
     background-color: #ffffff;
     color: #000000; }
+  div.sidebar .cart-title {
+    padding-bottom: 1px;
+    padding-top: 5px; }
   div.sidebar ul.cart-items {
     list-style-type: none;
-    padding-right: 35px; }
+    padding: 10px; }
   div.sidebar div.order-menu {
     height: 25em;
     background-color: white;
@@ -94,6 +96,7 @@ div.sidebar {
         margin-left: 10px;
         margin-bottom: 10px; }
     div.sidebar div.order-menu .user-info-section {
+      display: none;
       margin: 10px; }
 
 /*# sourceMappingURL=style.css.map */

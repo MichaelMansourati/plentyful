@@ -25,7 +25,6 @@ div.menu-item {
 	padding-bottom: 5px;
 	margin-bottom: 30px;
 	font-size: 15px;
-	min-height: 275px;
   &.classWithShadow {
     box-shadow: 3px 3px 10px 2px #888888;
  	}
@@ -90,9 +89,13 @@ div.sidebar {
 		background-color: #ffffff;
 		color: #000000;
 	}
+	.cart-title {
+		padding-bottom: 1px;
+		padding-top: 5px;
+	}
 	ul.cart-items {
 		list-style-type: none;
-		padding-right: 35px;
+		padding: 10px;
 	}
 	div.order-menu {
 		height: 25em;
@@ -112,6 +115,7 @@ div.sidebar {
 			}
 		}
 		.user-info-section {
+			display: none;
 			margin: 10px;
 		}
 	}
