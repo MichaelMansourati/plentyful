@@ -25,7 +25,7 @@ div.menu-item {
 	padding-bottom: 5px;
 	margin-bottom: 30px;
 	font-size: 15px;
-	min-height: 260px;
+	min-height: 275px;
   &.classWithShadow {
     box-shadow: 3px 3px 10px 2px #888888;
  	}
@@ -70,6 +70,7 @@ nav.navbar {
 	background-color: #ffffff;
 	border-radius: 0px;
 	.bigtext {
+		margin-left: 35px;
 		color: #000000;
 		.fa-leaf {
 			color: yellowgreen !important;
